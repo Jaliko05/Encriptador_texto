@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <script src="js/index.js" type="text/javascript" defer></script>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="obtener_encriptador">
+        <textarea type="text" id="obtener_encriptador_input" placeholder="Ingrese el texto aquí" autofocus></textarea>
+        <div class="contenedor_botones">
+          <button id="obtener_encriptador_boton_encriptar" >Encriptar</button>
+          <button id="obtener_encriptador_boton_desencriptar" onclick="desencriptar()">Desencriptar</button>
+        </div>
+      </div>
+      <div class="mostrar_encriptador">
+        <div class="mostrar_encriptador_div">
+            <textarea type ="text" id="mostrar_encriptador_mesaje" readonly="readonly"></textarea>
+        </div>
+        <div class="contenedor_boton_copiar">
+          <button id="mostrar_encriptador_boton_copiar">Copiar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
