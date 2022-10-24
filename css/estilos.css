@@ -1,114 +1,137 @@
-.contenedor{
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    background-color: #E6D89C;
+.contenedor {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #6a8aa6;
 }
 
-.obtener_encriptador{
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+.obtener_encriptador {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
-#obtener_encriptador_input{
-    position: relative;
-    height: 80vh;
-    background: inherit;
-    border: none;
-    outline: none;
-    padding: 0 70px;
-    font-size: x-large;
-    top: 50px;
-    color: #0f692e;
+#obtener_encriptador_input {
+  position: relative;
+  height: 80vh;
+  background: inherit;
+  border: none;
+  outline: none;
+  padding: 0 70px;
+  font-size: x-large;
+  top: 50px;
+  color: #c8dbe1;
+  z-index: 500;
 }
-.obtener_encriptador_input::placeholder{
-    position: absolute;
-    top: 0px;
+.obtener_encriptador_input::placeholder {
+  position: absolute;
+  top: 0px;
 }
 
-.contenedor_botones{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 20vh;
-    padding: 0 50px;
-   
+.contenedor_botones {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+  padding: 0 50px;
+  z-index: 900;
 }
 button {
+  width: 150px;
+  height: 40px;
+  background: #012340;
+  border: none;
+  border-radius: 35px;
+  color: #c8dbe1;
+  transition: 0.5s;
+}
+.mostrar_encriptador {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  background: #c4eef2;
+  margin: 20px;
+  border-radius: 50px;
+  padding: 20px;
+}
+.mostrar_encriptador_div {
+  height: 80vh;
+}
+
+#mostrar_encriptador_mesaje {
+  position: fixed;
+  height: 80vh;
+  background: inherit;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: x-large;
+  color: #101a26;
+  z-index: 900;
+  cursor: context-menu;
+  z-index: 500;
+}
+.contenedor_boton_copiar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+  z-index: 1000;
+}
+
+button:hover {
+  background: #d9e1b2;
+  border: solid #012340;
+  color: #012340;
+  font-weight: 900;
+  cursor: pointer;
+}
+button:active {
+  width: 160px;
+  height: 50px;
+  background: #c8dbe1;
+  border: solid #012340;
+  color: #012340;
+  font-weight: 900;
+  cursor: grabbing;
+}
+
+@media (max-width: 700px) {
+  .contenedor {
+    flex-wrap: wrap;
+    height: 100vh;
+  }
+  .obtener_encriptador {
+    width: 100%;
+    height: 50vh;
+    padding: 0px;
+  }
+  .mostrar_encriptador {
+    width: 100%;
+    height: 50vh;
+    border-radius: 0px;
+    margin: 0px;
+  }
+  button:hover {
     width: 150px;
     height: 40px;
-    background: #0f692e;
+    background: #012340;
     border: none;
     border-radius: 35px;
-    color: #C8DBE1;
+    color: #c8dbe1;
     transition: 0.5s;
-}
-
-.mostrar_encriptador{
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    background:#A69758;
-    margin: 20px;
-    border-radius: 50px;
-    padding: 20px;
-}
-.mostrar_encriptador_div{
-    height: 80vh;
-}
-
-#mostrar_encriptador_mesaje{
-    position: fixed;
-    height: 80vh;
-    background: inherit;
-    border: none;
-    outline: none;
-    padding: 20px;
-    font-size: x-large;
-    color: #e8dfbb;
-    z-index: 900;
-    cursor: context-menu;
-}
-.contenedor_boton_copiar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 20vh;
-    z-index: 1000;
-}
-
-button:hover{
-    background: #d9e1b2;
-    border: solid #0f692e;
-    color: #0f692e;
-    font-weight: 900;
-    cursor:pointer;
-}
-button:active{
+    font-size: small;
+    font-weight: normal;
+  }
+  button:active {
     width: 160px;
     height: 50px;
-    background: #C8DBE1;
-    border: solid #0f692e;
-    color: #0f692e;
-    font-weight: 900;
-    cursor:grabbing;
-}
-.container_alert{
-    background:red;
-}
-.button_alert{
-    background: #0f692e;
-    border: none;
-    border-radius: 35px;
-    color: #C8DBE1;
-    transition: 0.5s;
-}
-.button_alert:hover{
-    background: #d9e1b2;
-    border: solid #0f692e;
-    color: #0f692e;
-    font-weight: 900;
-    cursor:pointer;
+    background: #c8dbe1;
+    border: solid #012340;
+    color: #012340;
+    cursor: grabbing;
+    font-size: small;
+    font-weight: normal;
+  }
 }
